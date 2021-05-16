@@ -1,0 +1,33 @@
+{
+  "name": "niifi-token-contract",
+  "version": "1.0.0-alpha.0",
+  "description": "Governance token contract for NiiFi",
+  "main": "index.js",
+  "scripts": {
+    "build": "hardhat compile",
+    "console:localhost": "hardhat console --network localhost",
+    "console:ropsten": "hardhat console --network ropsten",
+    "deploy:localhost": "hardhat run --network localhost ./scripts/deploy.js",
+    "index:localhost": "hardhat run --network localhost ./scripts/index.js",
+    "lint": "eslint .",
+    "lint:fix": "npm run lint -- --fix",
+    "node": "hardhat node",
+    "test": "hardhat test",
+    "verify:ropsten": "hardhat verify --show-stack-traces --network ropsten --constructor-args arguments.js <the token address>"
+  },
+  "keywords": [],
+  "author": "Jens Ivar Jordre <jensivar@nahmii.io>",
+  "license": "LGPL-3.0",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-etherscan": "^2.1.2",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@openzeppelin/contracts": "^4.1.0",
+    "chai": "^4.3.4",
+    "eslint": "^7.26.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "ethers": "^5.1.4",
+    "hardhat": "^2.3.0",
+    "mnemonics": "^1.1.3"
+  }
+}

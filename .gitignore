@@ -1,0 +1,7 @@
+.idea/
+artifacts/
+cache/
+node_modules/
+*.iml
+package-lock.json
+secrets.json
