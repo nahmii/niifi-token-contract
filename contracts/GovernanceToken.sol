@@ -5,6 +5,9 @@ pragma solidity ^0.8.0;
 import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Capped.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
+/**
+ * @dev Extension of {ERC20Capped} that enables update of name and symbol.
+ */
 contract GovernanceToken is ERC20Capped, Ownable {
     string private _name;
     string private _symbol;
@@ -54,12 +57,12 @@ contract GovernanceToken is ERC20Capped, Ownable {
     /**
      * @dev Sets the value of `name`
      */
-    function setName(string memory name_)
+    function setName(string memory newName)
     public
     onlyOwner
     {
-        emit NameSet(_name, name_);
-        _name = name_;
+        emit NameSet(_name, newName);
+        _name = newName;
     }
 
     /**
@@ -77,12 +80,12 @@ contract GovernanceToken is ERC20Capped, Ownable {
     /**
      * @dev Sets the value of `symbol`
      */
-    function setSymbol(string memory symbol_)
+    function setSymbol(string memory newSymbol)
     public
     onlyOwner
     {
-        emit SymbolSet(_symbol, symbol_);
-        _symbol = symbol_;
+        emit SymbolSet(_symbol, newSymbol);
+        _symbol = newSymbol;
     }
 
     /**
