@@ -1,5 +1,5 @@
 // contracts/Box.sol
-// SPDX-License-Identifier: MIT
+// SPDX-License-Identifier: LGPL-3.0-only
 pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Capped.sol";
