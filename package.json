@@ -1,6 +1,6 @@
 {
   "name": "niifi-token-contract",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0",
   "description": "Governance token contract for NiiFi",
   "main": "index.js",
   "scripts": {
