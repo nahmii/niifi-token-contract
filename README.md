@@ -39,9 +39,15 @@ Deploy contracts to the node
 npm run deploy:localhost
 ```
 
-The sample script at `scripts/index.js` may be run to mint and transfer tokens as well as to transfer ownership of the contract.
+The sample script at `scripts/mint.js` may be run to mint tokens.
 ```shell
-npm run index:localhost
+npm run mint:localhost
+```
+
+Another sample script at `scripts/transfer.js` may be run to transfer tokens from 
+the mint target to another account.
+```shell
+npm run transfer:localhost
 ```
 
 Also the HardHat REPL may be started to interact with the HardHat instance
