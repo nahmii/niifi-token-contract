@@ -3,6 +3,7 @@
 'use strict';
 
 const { ethers } = require('hardhat');
+require('dotenv').config();
 
 async function main() {
   const [owner, other] = await ethers.provider.listAccounts();
@@ -20,35 +21,14 @@ async function main() {
   const cap = await governanceToken.cap();
   console.log(`Cap: ${cap.toString()}`);
 
-  console.log('Minting to owner...');
-  await governanceToken.mint(owner, cap);
+  console.log('Transferring 40% of cap to other...');
+  await governanceToken.transfer(other, cap.mul(4).div(10));
 
   const value3 = await governanceToken.balanceOf(owner);
   console.log(`Balance of owner: ${value3.toString()}`);
 
   const value4 = await governanceToken.balanceOf(other);
   console.log(`Balance of other: ${value4.toString()}`);
-
-  console.log('Transferring to other...');
-  await governanceToken.transfer(other, cap);
-
-  const value5 = await governanceToken.balanceOf(owner);
-  console.log(`Balance of owner: ${value5.toString()}`);
-
-  const value6 = await governanceToken.balanceOf(other);
-  console.log(`Balance of other: ${value6.toString()}`);
-
-  console.log(`Current owner: ${await governanceToken.owner()}`);
-
-  console.log('Transferring ownership...');
-  await governanceToken.transferOwnership(other);
-  console.log(`Current owner: ${await governanceToken.owner()}`);
-
-  const otherSigner = await ethers.getSigner(other);
-
-  console.log('Transferring ownership back...');
-  await (governanceToken.connect(otherSigner)).transferOwnership(owner);
-  console.log(`Current owner: ${await governanceToken.owner()}`);
 }
 
 main()
