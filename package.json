@@ -10,7 +10,6 @@
     "deploy:localhost": "hardhat run --network localhost ./scripts/deploy.js",
     "deploy:mainnet": "hardhat run --network mainnet ./scripts/deploy.js",
     "deploy:ropsten": "hardhat run --network ropsten ./scripts/deploy.js",
-    "index:localhost": "hardhat run --network localhost ./scripts/index.js",
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
     "mint:localhost": "hardhat run --network localhost ./scripts/mint.js",
@@ -18,6 +17,7 @@
     "mint:ropsten": "hardhat run --network ropsten ./scripts/mint.js",
     "node": "hardhat node",
     "test": "hardhat test",
+    "transfer:localhost": "hardhat run --network localhost ./scripts/transfer.js",
     "verify:mainnet": "hardhat verify --show-stack-traces --network mainnet --constructor-args arguments.js",
     "verify:ropsten": "hardhat verify --show-stack-traces --network ropsten --constructor-args arguments.js"
   },
@@ -30,6 +30,7 @@
     "@nomiclabs/hardhat-waffle": "^2.0.1",
     "@openzeppelin/contracts": "^4.1.0",
     "chai": "^4.3.4",
+    "dotenv": "^9.0.2",
     "eslint": "^7.26.0",
     "eslint-config-airbnb": "^18.2.1",
     "ethers": "^5.1.4",
