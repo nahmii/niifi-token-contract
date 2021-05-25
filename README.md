@@ -4,11 +4,11 @@ This repository contains the governance token contract for NIIFI.
 
 ## Install
 
-This project was developed with Node.js v12. Other versions of Node.js have thus far not been tested with this project.
+This project was developed and tried with Node.js v12 and v14. Other versions of Node.js have thus far not been tested with this project. Note however that _@nomiclabs/hardhat-waffle_ was found to trigger faulty unit tests if installed with npm < 7. Thus you should most likely upgrade your npm with `npm install -g npm` before continuing.
 
 Install as follows:
 ```shell
-npm install
+npm install --engine-strict
 ```
 
 ## Build
