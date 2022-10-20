@@ -10,7 +10,7 @@ const fs = require('fs')
 const tokens = [
     {
         name: 'Nahmii',
-        symbol: 'NII',
+        symbol: 'KNII',
         decimals: 18,
     },
     {
